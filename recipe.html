@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>ポタージュ材料計算機</title>
+  <title>材料計算機</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
@@ -24,6 +24,7 @@
         description: "",
         baseIngredients: ["キャベツ", "菜の花", "レタス", "ルッコラ", "玉ねぎ", "セロリ", "カリフラワー", "青豆"],
         defaultBaseKey: "野菜",
+        referenceAmount: 200,
         ratio: {
           "野菜": 1.0,
           "酢 or レモン汁": 0.05,
@@ -50,6 +51,7 @@
         description: "",
         baseIngredients: ["にんじん", "ブロッコリー", "かぶ", "じゃがいも", "かぼちゃ", "さつまいも", "とうもろこし", "かぼちゃ"],
         defaultBaseKey: "野菜",
+        referenceAmount: 200,
         ratio: {
           "野菜": 1.0,
           "玉ねぎ": 0.5,
@@ -125,6 +127,7 @@
         description: "煮物全般に使える万能だし",
         baseIngredients: ["白菜", "葉の花", "青梗菜", "水菜", "キャベツ", "レタス"],
         defaultBaseKey: "野菜",
+        referenceAmount: 200,
         ratio: {
           "野菜": 1.0,
           "だし": 0.8,
@@ -200,6 +203,7 @@
         description: "全部混ぜて180℃で揚げる",
         baseIngredients: [],
         defaultBaseKey: "鶏ムネ肉",
+        referenceAmount: 300,
         ratio: {
           "鶏ムネ肉": 1.0,
           "全卵": 0.10,
@@ -214,6 +218,7 @@
         description: "8分煮るだけ",
         baseIngredients: [],
         defaultBaseKey: "桃",
+        referenceAmount: 300,
         ratio: {
           "桃": 1.0,
           "水": 1.0,
@@ -223,9 +228,10 @@
       },
       french_dressing: {
         name: "フレンチドレッシング",
-        description: "玉ねぎ=74g",
+        description: "",
         baseIngredients: [],
         defaultBaseKey: "玉ねぎ",
+        referenceAmount: 74,
         ratio: {
           "玉ねぎ": 1.0,
           "にんにく": 0.081,        // 6/74
@@ -242,6 +248,7 @@
         description: "牛乳と塩、オリーヴオイルを加えると冷製スープになる",
         baseIngredients: [],
         defaultBaseKey: "じゃがいも",
+        referenceAmount: 300,
         ratio: {
           "じゃがいも": 1.0,
           "玉ねぎ": 0.15,
@@ -254,6 +261,7 @@
         description: "香辛料は任意。白ワインヴィネガー=500ml。玉ねぎ系、にんにく、トマトから1種以上いれるとよい",
         baseIngredients: [],
         defaultBaseKey: "白ワインヴィネガー",
+        referenceAmount: 500,
         ratio: {
           "白ワインヴィネガー": 1.0,
           "水": 1.2,
@@ -269,6 +277,7 @@
         description: "水=1500gで4人前。http://blog.livedoor.jp/nsg3/archives/50964262.html",
         baseIngredients: [],
         defaultBaseKey: "鶏手羽先",
+        referenceAmount: 1500,
         ratio: {
           "水": 2.5, // 1500/600
           "鶏手羽先": 1.0,
@@ -280,6 +289,167 @@
           "柚子胡椒": "適量"
         }
       },
+      //
+      katsuo_15ban_dashi: {
+        name: "かつお1.5番だし",
+        baseIngredients: ["水"],
+        defaultBaseKey: "水",
+        referenceAmount: 1000,
+        ratio: {
+          水: 1000,
+          昆布: 6,
+          花かつお: 16
+        },
+      },
+      niboshi_konbu_dashi: {
+        name: "煮干し昆布だし",
+        description: "",
+        baseIngredients: ["水"],
+        defaultBaseKey: "水",
+        referenceAmount: 1000,
+        ratio: {
+          水: 1000,
+          昆布: 6,
+          煮干し: 16
+        },
+      },
+      usukuchi_happouji: {
+        name: "薄口八方池",
+        description: "",
+        baseIngredients: ["だし"],
+        defaultBaseKey: "だし",
+        referenceAmount: 100,
+        ratio: {
+          だし: 12,
+          薄口醤油: 1,
+          みりん: 1
+        },
+      },
+      dashitsuyu: {
+        name: "だしつゆ",
+        description: "",
+        baseIngredients: ["だし"],
+        defaultBaseKey: "だし",
+        referenceAmount: 100,
+        ratio: {
+          だし: 16,
+          薄口醤油: 1,
+          みりん: 0.5
+        },
+      },
+      koikuchi_happouji: {
+        name: "濃口八方池",
+        description: "",
+        baseIngredients: ["だし"],
+        defaultBaseKey: "だし",
+        referenceAmount: 100,
+        ratio: {
+          だし: 8,
+          濃口醤油: 1,
+          みりん: 1
+        },
+      },
+      umadashi: {
+        name: "うまだし",
+        description: "",
+        baseIngredients: ["だし"],
+        defaultBaseKey: "だし",
+        referenceAmount: 100,
+        ratio: {
+          だし: 5,
+          薄口醤油: 1
+        },
+      },
+      tendashi: {
+        name: "天だし",
+        description: "",
+        baseIngredients: ["だし"],
+        defaultBaseKey: "だし",
+        referenceAmount: 100,
+        ratio: {
+          だし: 5,
+          濃口醤油: 1,
+          みりん: 1
+        },
+      },
+      suiji: {
+        name: "吸い地",
+        description: "",
+        baseIngredients: ["だし"],
+        defaultBaseKey: "だし",
+        referenceAmount: 100,
+        ratio: {
+          だし: 100,
+          塩: 0.5,
+          薄口醤油: 2
+        },
+      },
+      tosazu: {
+        name: "土佐酢",
+        description: "",
+        baseIngredients: ["水"],
+        defaultBaseKey: "水",
+        referenceAmount: 100,
+        ratio: {
+          水: 100,
+          薄口醤油: 20,
+          みりん: 40,
+          米酢: 40,
+          かつおぶし: 4
+        },
+      },
+      sanbaisu: {
+        name: "三杯酢",
+        description: "",
+        baseIngredients: ["米酢"],
+        defaultBaseKey: "米酢",
+        referenceAmount: 40,
+        ratio: {
+          米酢: 40,
+          薄口醤油: 20,
+          みりん: 40
+        },
+      },
+      karashi_sumiso_saikyo: {
+        name: "辛子酢味噌_西京味噌",
+        description: "",
+        baseIngredients: ["西京味噌"],
+        defaultBaseKey: "西京味噌",
+        referenceAmount: 60,
+        ratio: {
+          西京味噌: 60,
+          米酢: 30,
+          練り辛子: 6
+        },
+      },
+      karashi_sumiso: {
+        name: "辛子酢味噌",
+        description: "",
+        baseIngredients: ["味噌"],
+        defaultBaseKey: "味噌",
+        referenceAmount: 30,
+        ratio: {
+          味噌: 30,
+          みりん: 30,
+          米酢: 30,
+          練り辛子: 6
+        },
+      },
+      gomazu: {
+        name: "胡麻酢",
+        description: "",
+        baseIngredients: ["白煎りゴマ"],
+        defaultBaseKey: "白煎りゴマ",
+        referenceAmount: 30,
+        ratio: {
+          白煎りゴマ: 30,
+          砂糖: 10,
+          薄口醤油: 30,
+          米酢: 60,
+          みりん: 30,
+          おろしにんにく: 3
+        },
+      }
     };
 
     function round(x) {
@@ -290,23 +460,29 @@
       return Math.round(x * factor) / factor;
     }
 
+    function getInitialRecipeKey(): string {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("recipe") || "potage";
+    }
+
     function App() {
-      const [recipeKey, setRecipeKey] = React.useState("potage");
+      const [recipeKey, setRecipeKey] = React.useState(getInitialRecipeKey);
       const preset = RECIPE_PRESETS[recipeKey];
-    
+
       const defaultBaseKey = preset.defaultBaseKey;
       const [baseKey, setBaseKey] = React.useState(defaultBaseKey);
+      const amount = preset.referenceAmount || 200;
       const [unit, setUnit] = React.useState(
-        200 / (typeof preset.ratio[defaultBaseKey] === "number" ? preset.ratio[defaultBaseKey] : 1)
+        amount / (typeof preset.ratio[defaultBaseKey] === "number" ? preset.ratio[defaultBaseKey] : 1)
       );
-    
+
       React.useEffect(() => {
         const r = preset.ratio[defaultBaseKey];
-        const initialUnit = typeof r === "number" ? 200 / r : 200;
+        const initialUnit = typeof r === "number" ? amount / r : amount;
         setBaseKey(defaultBaseKey);
         setUnit(initialUnit);
       }, [recipeKey]);
-    
+
       const weights = React.useMemo(() => {
         const w = {};
         Object.entries(preset.ratio).forEach(([name, r]) => {
@@ -318,7 +494,7 @@
         });
         return w;
       }, [preset, unit]);
-    
+
       function handleWeightChange(name, value) {
         const r = preset.ratio[name];
         if (typeof r === "number") {
@@ -327,21 +503,41 @@
           setUnit(newUnit);
         }
       }
-    
+
+      function onSelectedRecipeChanged(e) {
+        const newKey = e.target.value;
+        setRecipeKey(newKey);
+
+        const params = new URLSearchParams(window.location.search);
+        params.set('recipe', newKey);
+        const newUrl =
+          window.location.pathname +
+          '?' +
+          params.toString();
+        window.history.replaceState(null, '', newUrl);
+      }
+
+      React.useEffect(() => {
+        const recipeName = RECIPE_PRESETS[recipeKey].name;
+        document.title = `${recipeName}材料計算機`;
+      }, [recipeKey]);
+
       return (
         <>
           <label htmlFor="recipe">レシピ
             <select
               id="recipe"
               value={recipeKey}
-              onChange={e => setRecipeKey(e.target.value)}
+              onChange={onSelectedRecipeChanged}
             >
               {Object.entries(RECIPE_PRESETS).map(([key, p]) => (
-                <option key={key} value={key}>{p.name}</option>
+                <option key={key} value={key}>
+                  {p.name}　-　{p.description}
+                </option>
               ))}
             </select>
           </label>
-    
+
           <label>{preset.description}</label>
           {preset.baseIngredients.length > 0 && (
             <label>
