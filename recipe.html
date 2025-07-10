@@ -475,6 +475,7 @@
       const [unit, setUnit] = React.useState(
         amount / (typeof preset.ratio[defaultBaseKey] === "number" ? preset.ratio[defaultBaseKey] : 1)
       );
+      const [unsaltedButter, setUnsaltedButter] = React.useState(false);
 
       React.useEffect(() => {
         const r = preset.ratio[defaultBaseKey];
@@ -492,8 +493,27 @@
             w[name] = r;
           }
         });
+        
+        // バターが含まれる材料の場合、無塩バターチェックボックスがONなら塩を追加
+        if (unsaltedButter) {
+          const butterIngredients = Object.entries(w).filter(([name, weight]) => 
+            (name.includes('バター') || name.includes('油脂')) && typeof weight === 'number'
+          );
+          
+          if (butterIngredients.length > 0) {
+            let totalSalt = 0;
+            butterIngredients.forEach(([name, weight]) => {
+              totalSalt += weight * 0.014; // バター100gに対して塩1.4g
+            });
+            
+            if (totalSalt > 0) {
+              w['塩（無塩バター用）'] = round(totalSalt);
+            }
+          }
+        }
+        
         return w;
-      }, [preset, unit]);
+      }, [preset, unit, unsaltedButter]);
 
       function handleWeightChange(name, value) {
         const r = preset.ratio[name];
@@ -546,6 +566,19 @@
           )}
 
           <h3>材料の重量</h3>
+          
+          {/* バターや油脂が含まれている場合のみ無塩バターチェックボックスを表示 */}
+          {Object.keys(preset.ratio).some(name => name.includes('バター') || name.includes('油脂')) && (
+            <label>
+              <input
+                type="checkbox"
+                checked={unsaltedButter}
+                onChange={e => setUnsaltedButter(e.target.checked)}
+              />
+              無塩バターを使用（バター100gに対して塩1.4gを追加）
+            </label>
+          )}
+          
           <table className="striped">
             <thead>
               <tr>
@@ -555,23 +588,28 @@
               </tr>
             </thead>
             <tbody>
-              {Object.entries(preset.ratio).map(([name, r]) => (
-                <tr key={name}>
-                  <td>{name}</td>
-                  <td>
-                    {typeof r === "number" ? (
-                      <input
-                        type="number"
-                        value={weights[name]}
-                        onChange={e => handleWeightChange(name, parseFloat(e.target.value))}
-                      />
-                    ) : (
-                      <span>{weights[name]}</span>
-                    )}
-                  </td>
-                  <td>{typeof r === "number" ? r : ""}</td>
-                </tr>
-              ))}
+              {Object.entries(weights).map(([name, weight]) => {
+                const r = preset.ratio[name];
+                const isAddedSalt = name === '塩（無塩バター用）';
+                
+                return (
+                  <tr key={name}>
+                    <td>{name}</td>
+                    <td>
+                      {typeof r === "number" && !isAddedSalt ? (
+                        <input
+                          type="number"
+                          value={weight}
+                          onChange={e => handleWeightChange(name, parseFloat(e.target.value))}
+                        />
+                      ) : (
+                        <span>{weight}</span>
+                      )}
+                    </td>
+                    <td>{typeof r === "number" ? r : ""}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </>
