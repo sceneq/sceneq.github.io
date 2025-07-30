@@ -476,12 +476,14 @@
         amount / (typeof preset.ratio[defaultBaseKey] === "number" ? preset.ratio[defaultBaseKey] : 1)
       );
       const [unsaltedButter, setUnsaltedButter] = React.useState(false);
+      const [totalWeight, setTotalWeight] = React.useState(null);
 
       React.useEffect(() => {
         const r = preset.ratio[defaultBaseKey];
         const initialUnit = typeof r === "number" ? amount / r : amount;
         setBaseKey(defaultBaseKey);
         setUnit(initialUnit);
+        setTotalWeight(null);
       }, [recipeKey]);
 
       const weights = React.useMemo(() => {
@@ -515,12 +517,36 @@
         return w;
       }, [preset, unit, unsaltedButter]);
 
+      const calculatedTotalWeight = React.useMemo(() => {
+        return round(Object.values(weights).reduce((sum, weight) => 
+          sum + (typeof weight === 'number' ? weight : 0), 0
+        ));
+      }, [weights]);
+
       function handleWeightChange(name, value) {
         const r = preset.ratio[name];
         if (typeof r === "number") {
           const newUnit = value / r;
           setBaseKey(name);
           setUnit(newUnit);
+          setTotalWeight(null);
+        }
+      }
+
+      function handleTotalWeightChange(value) {
+        if (!value || value <= 0) {
+          setTotalWeight(null);
+          return;
+        }
+        
+        const currentTotal = Object.values(weights).reduce((sum, weight) => 
+          sum + (typeof weight === 'number' ? weight : 0), 0
+        );
+        
+        if (currentTotal > 0) {
+          const ratio = value / currentTotal;
+          setUnit(unit * ratio);
+          setTotalWeight(value);
         }
       }
 
@@ -610,6 +636,18 @@
                   </tr>
                 );
               })}
+              <tr style={{borderTop: '2px solid #ccc', fontWeight: 'bold'}}>
+                <td>総重量</td>
+                <td>
+                  <input
+                    type="number"
+                    value={totalWeight !== null ? totalWeight : calculatedTotalWeight}
+                    onChange={e => handleTotalWeightChange(parseFloat(e.target.value))}
+                    placeholder={calculatedTotalWeight}
+                  />
+                </td>
+                <td>-</td>
+              </tr>
             </tbody>
           </table>
         </>
