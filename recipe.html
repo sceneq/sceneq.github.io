@@ -483,7 +483,7 @@
 
     function round(x) {
       if (x === 0) return 0;
-      const digits = 3;
+      const digits = 2;
       const exponent = Math.floor(Math.log10(Math.abs(x)));
       const factor = Math.pow(10, digits - 1 - exponent);
       return Math.round(x * factor) / factor;
@@ -545,6 +545,11 @@
         
         return w;
       }, [preset, unit, unsaltedButter]);
+
+      // 比率（数値のみ）の合計を事前計算
+      const totalRatio = React.useMemo(() => {
+        return Object.values(preset.ratio).reduce((sum, r) => sum + (typeof r === 'number' ? r : 0), 0);
+      }, [preset]);
 
       const calculatedTotalWeight = React.useMemo(() => {
         return round(Object.values(weights).reduce((sum, weight) => 
@@ -661,7 +666,11 @@
                         <span>{weight}</span>
                       )}
                     </td>
-                    <td>{typeof r === "number" ? r : ""}</td>
+                    <td>
+                      {typeof r === "number" && totalRatio > 0
+                        ? `${round((r / totalRatio) * 100)}%`
+                        : ""}
+                    </td>
                   </tr>
                 );
               })}
