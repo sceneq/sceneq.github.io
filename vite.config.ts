@@ -10,7 +10,7 @@ export default defineConfig({
     'process.env': '{}',
   },
   build: {
-    outDir: 'dist',
+    outDir: 'public/js',
     emptyOutDir: false,
     sourcemap: true,
     lib: {
