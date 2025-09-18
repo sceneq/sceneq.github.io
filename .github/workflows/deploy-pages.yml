@@ -30,7 +30,7 @@ jobs:
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./assets
+          path: ./dist
 
       - name: Deploy Pages
         uses: actions/deploy-pages@v4
