@@ -1,0 +1,586 @@
+{
+  "vinaigrette": {
+    "name": "ヴィネグレットドレッシング",
+    "description": "",
+    "baseIngredients": [
+      "キャベツ",
+      "菜の花",
+      "レタス",
+      "ルッコラ",
+      "玉ねぎ",
+      "セロリ",
+      "カリフラワー",
+      "青豆"
+    ],
+    "defaultBaseKey": "野菜",
+    "referenceAmount": 200,
+    "ratio": {
+      "野菜": 1,
+      "酢 or レモン汁": 0.05,
+      "油": 0.15,
+      "塩": 0.01
+    }
+  },
+  "yasai_gohan": {
+    "name": "野菜ごはん",
+    "description": "野菜と米の混ぜご飯用の比率",
+    "baseIngredients": [
+      "たけのこ",
+      "ごぼう",
+      "きのこ",
+      "里芋",
+      "にんじん",
+      "れんこん",
+      "菜の花",
+      "かぶら葉",
+      "とうもろこし"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "米": 1.5,
+      "鶏肉": 1,
+      "薄口醤油": 0.36,
+      "みりん": 0.18,
+      "水": 4
+    }
+  },
+  "potage": {
+    "name": "ポタージュ",
+    "description": "",
+    "baseIngredients": [
+      "にんじん",
+      "ブロッコリー",
+      "かぶ",
+      "じゃがいも",
+      "かぼちゃ",
+      "さつまいも",
+      "とうもろこし",
+      "かぼちゃ"
+    ],
+    "defaultBaseKey": "野菜",
+    "referenceAmount": 200,
+    "ratio": {
+      "野菜": 1,
+      "玉ねぎ": 0.5,
+      "牛乳": 0.75,
+      "水": 0.75,
+      "塩": 0.015
+    }
+  },
+  "amasudare": {
+    "name": "甘酢",
+    "description": "漬ける",
+    "baseIngredients": [
+      "みょうが",
+      "大根",
+      "かぶ",
+      "トマト",
+      "玉ねぎ",
+      "新生姜",
+      "セロリ"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "水": 0.6,
+      "酢": 0.4,
+      "砂糖": 0.2,
+      "塩": 0.01
+    }
+  },
+  "goma_ae": {
+    "name": "ごま和え衣",
+    "description": "和える",
+    "baseIngredients": [
+      "ほうれん草",
+      "菜の花",
+      "小松菜",
+      "ズッキーニ",
+      "春菊",
+      "アスパラガス",
+      "オクラ"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "すりごま": 0.1,
+      "砂糖": 0.05,
+      "しょうゆ（濃口）": 0.1
+    }
+  },
+  "mushini": {
+    "name": "蒸し煮",
+    "description": "蒸し煮",
+    "baseIngredients": [
+      "ブロッコリー",
+      "キャベツ",
+      "パプリカ",
+      "玉ねぎ",
+      "きのこ",
+      "にんじん",
+      "ごぼう"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "油脂": 0.1,
+      "水": 0.3,
+      "塩": 0.01
+    }
+  },
+  "itameni": {
+    "name": "炒め煮",
+    "description": "炒め煮",
+    "baseIngredients": [
+      "ごぼう",
+      "じゃがいも",
+      "にんじん",
+      "れんこん",
+      "うど"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "油": 0.1,
+      "しょうゆ（濃口）": 0.18,
+      "砂糖": 0.09
+    }
+  },
+  "umani": {
+    "name": "うま煮",
+    "description": "うま煮",
+    "baseIngredients": [
+      "かぶ",
+      "ごぼう",
+      "にんじん",
+      "れんこん",
+      "大根",
+      "たけのこ",
+      "鶏肉"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "肉": 0.5,
+      "みりん": 0.1,
+      "しょうゆ（濃口）": 0.1,
+      "水": "かぶる程度"
+    }
+  },
+  "happouji": {
+    "name": "八方地",
+    "description": "煮物全般に使える万能だし",
+    "baseIngredients": [
+      "白菜",
+      "葉の花",
+      "青梗菜",
+      "水菜",
+      "キャベツ",
+      "レタス"
+    ],
+    "defaultBaseKey": "野菜",
+    "referenceAmount": 200,
+    "ratio": {
+      "野菜": 1,
+      "だし": 0.8,
+      "みりん": 0.1,
+      "しょうゆ（薄口）": 0.1
+    }
+  },
+  "ponzu": {
+    "name": "ポン酢醤油",
+    "description": "ポン酢",
+    "baseIngredients": [],
+    "defaultBaseKey": "柑橘のしぼり汁",
+    "ratio": {
+      "柑橘のしぼり汁": 0.5,
+      "しょうゆ（濃口）": 0.4,
+      "みりん": 0.1
+    }
+  },
+  "yakibitashi": {
+    "name": "焼き浸し",
+    "description": "焼き浸し用の地",
+    "baseIngredients": [
+      "かぶ",
+      "パプリカ",
+      "なす",
+      "かぼちゃ",
+      "ズッキーニ",
+      "ゴーヤー"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "だし": 0.6,
+      "しょうゆ（薄口）": 0.1,
+      "みりん": 0.1
+    }
+  },
+  "tsukeshiji": {
+    "name": "漬し地",
+    "description": "漬け用の地",
+    "baseIngredients": [
+      "キャベツ",
+      "白菜",
+      "菜の花",
+      "小松菜",
+      "青梗菜",
+      "ほうれん草",
+      "オクラ",
+      "青豆",
+      "アスパラガス",
+      "三つ葉",
+      "里芋"
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "だし": 0.5,
+      "しょうゆ（薄口）": 0.1
+    }
+  },
+  "tebasaki_shouyu_ni": {
+    "name": "◯◯と手羽先の醤油煮",
+    "description": "水が50%〜150%になるまで煮詰める",
+    "baseIngredients": [
+      "蓮根",
+      "大根",
+      "里芋",
+      "じゃがいも",
+      "筍",
+      "根菜類"
+    ],
+    "defaultBaseKey": "◯◯",
+    "ratio": {
+      "◯◯": 1,
+      "手羽先": 1,
+      "濃口醤油": 0.06,
+      "みりん": 0.06,
+      "生姜": 0.01,
+      "水": "かぶる程度"
+    }
+  },
+  "chahan": {
+    "name": "炒飯",
+    "description": "最小構成の炒飯",
+    "baseIngredients": [],
+    "defaultBaseKey": "ご飯",
+    "ratio": {
+      "ご飯": 1,
+      "卵": 0.33,
+      "刻みネギ": 0.017,
+      "サラダ油": 0.1,
+      "塩": 0.007,
+      "しょうゆ": 0.02,
+      "こしょう": "少々"
+    }
+  },
+  "chicken_nugget": {
+    "name": "チキンナゲットBASIC",
+    "description": "全部混ぜて180℃で揚げる",
+    "baseIngredients": [],
+    "defaultBaseKey": "鶏ムネ肉",
+    "referenceAmount": 300,
+    "ratio": {
+      "鶏ムネ肉": 1,
+      "全卵": 0.1,
+      "薄力粉": 0.1,
+      "マヨネーズ": 0.05,
+      "塩": 0.01,
+      "コショウ": 0.002
+    }
+  },
+  "peach_compote": {
+    "name": "桃のコンポート",
+    "description": "8分煮るだけ",
+    "baseIngredients": [],
+    "defaultBaseKey": "桃",
+    "referenceAmount": 300,
+    "ratio": {
+      "桃": 1,
+      "水": 1,
+      "砂糖": 0.2,
+      "レモン汁": 0.05
+    }
+  },
+  "french_dressing": {
+    "name": "フレンチドレッシング",
+    "description": "",
+    "baseIngredients": [],
+    "defaultBaseKey": "玉ねぎ",
+    "referenceAmount": 74,
+    "ratio": {
+      "玉ねぎ": 1,
+      "にんにく": 0.081,
+      "粉からし": 0.054,
+      "ブラックペッパー": 0.027,
+      "塩": 0.108,
+      "砂糖": 0.108,
+      "酢": 1.08,
+      "サラダオイル": 2.16
+    }
+  },
+  "potato_potage_base": {
+    "name": "じゃがいもの冷製スープのベース",
+    "description": "牛乳と塩、オリーヴオイルを加えると冷製スープになる",
+    "baseIngredients": [],
+    "defaultBaseKey": "じゃがいも",
+    "referenceAmount": 300,
+    "ratio": {
+      "じゃがいも": 1,
+      "玉ねぎ": 0.15,
+      "水": 0.9,
+      "塩": 0.01
+    }
+  },
+  "pickle_liquid": {
+    "name": "ピクルス液",
+    "description": "香辛料は任意。白ワインヴィネガー=500ml。玉ねぎ系、にんにく、トマトから1種以上いれるとよい",
+    "baseIngredients": [],
+    "defaultBaseKey": "白ワインヴィネガー",
+    "referenceAmount": 500,
+    "ratio": {
+      "白ワインヴィネガー": 1,
+      "水": 1.2,
+      "本みりん": 0.12,
+      "塩": 0.024,
+      "鷹の爪": "1〜2本(省略可)",
+      "黒胡椒（ホール）": "10粒程度(省略可)",
+      "ローリエ": "1枚(省略可)"
+    }
+  },
+  "mizutaki_gatten": {
+    "name": "ためしてガッテン水炊き",
+    "description": "水=1500gで4人前。http://blog.livedoor.jp/nsg3/archives/50964262.html",
+    "baseIngredients": [],
+    "defaultBaseKey": "鶏手羽先",
+    "referenceAmount": 1500,
+    "ratio": {
+      "水": 2.5,
+      "鶏手羽先": 1,
+      "鶏もも肉": 1,
+      "小葱": "適量",
+      "野菜": "適量",
+      "豆腐": "適量",
+      "醤油ポン酢": "適量",
+      "柚子胡椒": "適量"
+    }
+  },
+  "katsuo_15ban_dashi": {
+    "name": "かつお1.5番だし",
+    "baseIngredients": [
+      "水"
+    ],
+    "defaultBaseKey": "水",
+    "referenceAmount": 1000,
+    "ratio": {
+      "水": 1000,
+      "昆布": 6,
+      "花かつお": 16
+    }
+  },
+  "niboshi_konbu_dashi": {
+    "name": "煮干し昆布だし",
+    "description": "",
+    "baseIngredients": [
+      "水"
+    ],
+    "defaultBaseKey": "水",
+    "referenceAmount": 1000,
+    "ratio": {
+      "水": 1000,
+      "昆布": 6,
+      "煮干し": 16
+    }
+  },
+  "usukuchi_happouji": {
+    "name": "薄口八方池",
+    "description": "",
+    "baseIngredients": [
+      "だし"
+    ],
+    "defaultBaseKey": "だし",
+    "referenceAmount": 100,
+    "ratio": {
+      "だし": 12,
+      "薄口醤油": 1,
+      "みりん": 1
+    }
+  },
+  "dashitsuyu": {
+    "name": "だしつゆ",
+    "description": "",
+    "baseIngredients": [
+      "だし"
+    ],
+    "defaultBaseKey": "だし",
+    "referenceAmount": 100,
+    "ratio": {
+      "だし": 16,
+      "薄口醤油": 1,
+      "みりん": 0.5
+    }
+  },
+  "koikuchi_happouji": {
+    "name": "濃口八方池",
+    "description": "",
+    "baseIngredients": [
+      "だし"
+    ],
+    "defaultBaseKey": "だし",
+    "referenceAmount": 100,
+    "ratio": {
+      "だし": 8,
+      "濃口醤油": 1,
+      "みりん": 1
+    }
+  },
+  "umadashi": {
+    "name": "うまだし",
+    "description": "",
+    "baseIngredients": [
+      "だし"
+    ],
+    "defaultBaseKey": "だし",
+    "referenceAmount": 100,
+    "ratio": {
+      "だし": 5,
+      "薄口醤油": 1
+    }
+  },
+  "tendashi": {
+    "name": "天だし",
+    "description": "",
+    "baseIngredients": [
+      "だし"
+    ],
+    "defaultBaseKey": "だし",
+    "referenceAmount": 100,
+    "ratio": {
+      "だし": 5,
+      "濃口醤油": 1,
+      "みりん": 1
+    }
+  },
+  "suiji": {
+    "name": "吸い地",
+    "description": "",
+    "baseIngredients": [
+      "だし"
+    ],
+    "defaultBaseKey": "だし",
+    "referenceAmount": 100,
+    "ratio": {
+      "だし": 100,
+      "塩": 0.5,
+      "薄口醤油": 2
+    }
+  },
+  "tosazu": {
+    "name": "土佐酢",
+    "description": "",
+    "baseIngredients": [
+      "水"
+    ],
+    "defaultBaseKey": "水",
+    "referenceAmount": 100,
+    "ratio": {
+      "水": 100,
+      "薄口醤油": 20,
+      "みりん": 40,
+      "米酢": 40,
+      "かつおぶし": 4
+    }
+  },
+  "sanbaisu": {
+    "name": "三杯酢",
+    "description": "",
+    "baseIngredients": [
+      "米酢"
+    ],
+    "defaultBaseKey": "米酢",
+    "referenceAmount": 40,
+    "ratio": {
+      "米酢": 40,
+      "薄口醤油": 20,
+      "みりん": 40
+    }
+  },
+  "karashi_sumiso_saikyo": {
+    "name": "辛子酢味噌_西京味噌",
+    "description": "",
+    "baseIngredients": [
+      "西京味噌"
+    ],
+    "defaultBaseKey": "西京味噌",
+    "referenceAmount": 60,
+    "ratio": {
+      "西京味噌": 60,
+      "米酢": 30,
+      "練り辛子": 6
+    }
+  },
+  "karashi_sumiso": {
+    "name": "辛子酢味噌",
+    "description": "",
+    "baseIngredients": [
+      "味噌"
+    ],
+    "defaultBaseKey": "味噌",
+    "referenceAmount": 30,
+    "ratio": {
+      "味噌": 30,
+      "みりん": 30,
+      "米酢": 30,
+      "練り辛子": 6
+    }
+  },
+  "gomazu": {
+    "name": "胡麻酢",
+    "description": "",
+    "baseIngredients": [
+      "白煎りゴマ"
+    ],
+    "defaultBaseKey": "白煎りゴマ",
+    "referenceAmount": 30,
+    "ratio": {
+      "白煎りゴマ": 30,
+      "砂糖": 10,
+      "薄口醤油": 30,
+      "米酢": 60,
+      "みりん": 30,
+      "おろしにんにく": 3
+    }
+  },
+  "nasu_shouyu_ni_kihonkei": {
+    "name": "茄子の醤油煮 基本形",
+    "description": "300gになるまで煮る",
+    "baseIngredients": [],
+    "defaultBaseKey": "なす",
+    "ratio": {
+      "なす": 300,
+      "サラダ油": 30,
+      "薄口醤油": 20,
+      "水": 150
+    },
+    "referenceAmount": 300
+  },
+  "nasu_shishito_jako_ni": {
+    "name": "なすとししとうのじゃこ煮",
+    "description": "",
+    "baseIngredients": [],
+    "defaultBaseKey": "なす",
+    "ratio": {
+      "なす": 240,
+      "ししとう": 60,
+      "ちりめんじゃこ": 20,
+      "サラダ油": 30,
+      "濃口醤油": 18,
+      "みりん": 18,
+      "水": 100
+    },
+    "referenceAmount": 240
+  }
+}
