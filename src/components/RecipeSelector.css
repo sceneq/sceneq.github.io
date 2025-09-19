@@ -1,0 +1,29 @@
+.recipe-selector__control {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.recipe-selector__control--is-focused,
+.recipe-selector__control--menu-is-open {
+  border-color: var(--pico-form-element-border-color) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.recipe-selector__control--is-focused:hover,
+.recipe-selector__control--menu-is-open:hover {
+  border-color: var(--pico-form-element-border-color) !important;
+}
+
+.recipe-selector__input {
+  box-shadow: none !important;
+  border: 0 !important;
+  outline: none !important;
+}
+
+.recipe-selector__input:focus,
+.recipe-selector__input:focus-visible,
+.recipe-selector__input:focus-within {
+  box-shadow: none !important;
+  outline: none !important;
+}
