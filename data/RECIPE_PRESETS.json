@@ -582,5 +582,34 @@
       "水": 100
     },
     "referenceAmount": 240
+  },
+  "hakusai_tsukemono": {
+    "name": "白菜の漬物",
+    "description": "",
+    "baseIngredients": [
+      "白菜"
+    ],
+    "defaultBaseKey": "白菜",
+    "referenceAmount": 200,
+    "ratio": {
+      "白菜": 200,
+      "塩": 6,
+      "鷹の爪": "適量"
+    }
+  },
+  "hakusai_kobachi": {
+    "name": "白菜小鉢",
+    "description": "弱火で20分。仕上がり量は白菜の重さ。",
+    "baseIngredients": [
+      "白菜"
+    ],
+    "defaultBaseKey": "白菜",
+    "referenceAmount": 300,
+    "ratio": {
+      "白菜": 300,
+      "水": 50,
+      "薄口醤油": 12,
+      "ごま油": 3
+    }
   }
 }
