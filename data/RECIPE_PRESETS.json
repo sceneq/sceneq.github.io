@@ -199,6 +199,18 @@
       "みりん": 0.1
     }
   },
+  "ohitashi": {
+    "name": "お浸し",
+    "description": "",
+    "baseIngredients": [
+    ],
+    "defaultBaseKey": "野菜",
+    "ratio": {
+      "野菜": 1,
+      "だし": 0.5,
+      "しょうゆ（薄口）": 0.1,
+    }
+  },
   "yakibitashi": {
     "name": "焼き浸し",
     "description": "焼き浸し用の地",
